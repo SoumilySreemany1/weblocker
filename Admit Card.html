@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admit-page second-part">
+    <div class="admit-heading">
+        <h1>Admit Card</h1>
+        <h3>Download your exam admit card and hall ticket</h3>
+        <br>
+
+        <div class="universal">
+            <div class="container">
+                <h2>Download Admit Card</h2>
+                <form class="form-grid">
+                    <div class="form-group">
+                        <label for="exam">Select Exam</label>
+                        <select id="exam" name="exam" class="input-fields">
+                            <option value="">Choose your exam</option>
+                            <option value="SSC CGL 2025">SSC CGL 2025</option>
+                            <option value="UPSC CSE 2025">UPSC CSE 2025</option>
+                            <option value="IBPS PO 2025">IBPS PO 2025</option>
+                            <option value="RRB NTPC 2025">RRB NTPC 2025</option>
+                            <option value="MPPSC State Service 2025">MPPSC State Service 2025</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg">Registration Number</label>
+                        <input type="text" id="reg" name="reg" class="input-fields" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" class="input-fields">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" class="input-fields">
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="primary-btn">Download Admit Card</button>
+                        <button type="button" class="secondary-btn">Check Status</button>
+                    </div>
+                </form>
+
+                <br>
+                <div class="container-second">
+                    <div class="instructions">
+                        <div class="column">
+                            <h2>Important Instructions</h2>
+                            <h4>Before Downloading</h4>
+                            <ul class="blue-ticks">
+                                <li>Ensure all details are correct</li>
+                                <li>Check exam date and time</li>
+                                <li>Verify exam center location</li>
+                                <li>Take multiple printouts</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h2> Must Carry </h2>
+                            <h4> On Exam Day </h4> 
+                            <ul class="orange-alerts">
+                                <li>Carry original photo ID</li>
+                                <li>Reach center 30 minutes early</li>
+                                <li>No electronic devices allowed</li>
+                                <li>Follow COVID protocols</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cards-row">
+                        <div class="card-section available">
+                            <div class="section-header">
+                                <h3>Available</h3>
+                                <span class="badge green">3 Cards</span>
+                            </div>
+                            <div class="exam-card green-card">
+                                <div class="exam-info">
+                                <strong>SSC CGL</strong>
+                                <p>Exam: 25 Feb 2025</p>
+                                </div>
+                                <div class="button-wrapper">
+                                <span class="status green-text"> Download </span> </div>
+                            </div>
+                            <div class="exam-card green-card">
+                                <div class="exam-info">
+                                <strong>IBPS PO</strong>
+                                <p>Exam: 15 Mar 2025</p>
+                                </div>
+                                <div class="button-wrapper">
+                                <span class="status green-text">Download</span></div>
+                            </div>
+                            <div class="exam-card green-card">
+                                <div class="exam-info">
+                                <strong>MPPSC</strong>
+                                <p>Exam: 20 Mar 2025</p>
+                                </div>
+                                <div class="button-wrapper">
+                                <span class="status green-text">Download</span> </div>
+                            </div>
+                        </div>
+
+                        <div class="card-section pending">
+                            <div class="section-header">
+                                <h3>Pending</h3>
+                                <span class="badge orange">2 Cards</span>
+                            </div>
+                            <div class="exam-card orange-card">
+                                <div class="exam-info">
+                                <strong>UPSC CSE</strong>
+                                <p>Expected: 10 May 2025</p>
+                                </div>
+                                <div class="button-wrapper">
+                                <span class="status orange-text"> Pending </span></div>
+                            </div>
+                            <div class="exam-card orange-card">
+                                <div class="exam-info">
+                                <strong>RRB NTPC</strong>
+                                <p>Expected: 01 Apr 2025</p>
+                                </div>
+                                <div class="button-wrapper">
+                                <span class="status orange-text"> Pending </span></div>
+                            </div>
+                        </div>
+
+                        <div class="card-section help">
+                            <h3>Need Help?</h3>
+                            <button class="help-btn">❓ FAQ </button>
+                            <button class="help-btn">📞 Contact Support</button>
+                            <button class="help-btn">📄 Download Guide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

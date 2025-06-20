@@ -1,0 +1,182 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex; /* Use flexbox for overall layout */
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    min-height: 100vh;
+}
+
+.main-dashboard-wrapper {
+    max-width: 1400px; /* Increased max-width for more content */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between sections */
+}
+
+.dashboard-header {
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.dashboard-header h3 {
+    font-size: 1.1rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.dashboard-metrics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted for chart cards */
+    gap: 20px;
+}
+
+/* Card base style - applied to all cards */
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Specific styles for metric cards */
+.metric-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px; /* Adjust as needed */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.card-header h3 {
+    font-size: 1rem;
+    color: #6c757d;
+    margin: 0;
+    font-weight: 500;
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.icon-box i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.blue { background-color: #e0f2fe; }
+.blue i { color: #3b82f6; }
+
+.orange { background-color: #fff7ed; }
+.orange i { color: #f97316; }
+
+.green { background-color: #ecfdf5; }
+.green i { color: #22c55e; }
+
+.purple { background-color: #f5edff; }
+.purple i { color: #a855f7; }
+
+.metric {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #343a40;
+    margin: 0 0 10px 0;
+}
+
+.change {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.positive {
+    color: #28a745;
+}
+
+.next-exam {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: auto;
+}
+
+.next-exam a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.next-exam a:hover {
+    text-decoration: underline;
+}
+
+/* Specific styles for chart cards */
+.chart-card {
+    /* The base .card styles already provide padding, background, shadow, etc. */
+    text-align: center;
+}
+
+.chart-card h2 {
+    /* font-size: 1.5rem; */
+    color: #343a40;
+    margin-bottom: 5px;
+}
+
+.chart-card canvas {
+    max-width: 100%; /* Ensure canvas is responsive */
+    height: 300px; /* Fixed height for charts for consistency */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 10px) {
+    .dashboard-charts-container {
+        grid-template-columns: 1fr; /* Stack charts on smaller screens */
+    }
+    .chart-card canvas {
+        height: 20px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-metrics-container {
+        grid-template-columns: 1fr; /* Stack metric cards on smaller screens */
+    }
+    .main-dashboard-wrapper {
+        padding: 10px;
+    }
+    .dashboard-header h1 {
+        font-size: 2rem;
+    }
+    .dashboard-header h3 {
+        font-size: 1rem;
+    }
+    .card {
+        padding: 20px;
+    }
+}

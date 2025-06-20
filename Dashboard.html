@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="main-dashboard-wrapper">
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <h3>Welcome back! Here's your exam portal overview.</h3>
+        </div>
+
+        <div class="dashboard-metrics-container">
+            <div class="card metric-card">
+                <div class="card-header">
+                    <h3>Total Exams</h3>
+                    <div class="icon-box blue">
+                        <i class="material-icons">description</i>
+                    </div>
+                </div>
+                <p class="metric">156</p>
+                <p class="change positive">+12% from last month</p>
+            </div>
+
+            <div class="card metric-card">
+                <div class="card-header">
+                    <h3>Active Registrations</h3>
+                    <div class="icon-box orange">
+                        <i class="material-icons">person</i>
+                    </div>
+                </div>
+                <p class="metric">2,847</p>
+                <p class="change positive">+8% from last week</p>
+            </div>
+
+            <div class="card metric-card">
+                <div class="card-header">
+                    <h3>Upcoming Exams</h3>
+                    <div class="icon-box green">
+                        <i class="material-icons">calendar_today</i>
+                    </div>
+                </div>
+                <p class="metric">23</p>
+                <p class="next-exam">Next: <a href="#">SSC CGL</a> in 5 days</p>
+            </div>
+
+            <div class="card metric-card">
+                <div class="card-header">
+                    <h3>Total Revenue</h3>
+                    <div class="icon-box purple">
+                        <i class="material-icons">attach_money</i>
+                    </div>
+                </div>
+                <p class="metric">₹4.2L</p>
+                <p class="change positive">+15% from last month</p>
+            </div>
+        </div>
+
+        <div class="dashboard-charts-container">
+            <div class="card chart-card">
+                <h2>Registration Trends</h2>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="card chart-card">
+                <h2>Exam Categories</h2>
+                <canvas id="donutChart"></canvas>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
