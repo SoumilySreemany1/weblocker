@@ -36,7 +36,7 @@ new Chart(ctxDonut, {
   },
   options: {
     responsive: true,
-    cutout: '70%',
+    cutout: '50%',
     plugins: {
       legend: {
         position: 'bottom'

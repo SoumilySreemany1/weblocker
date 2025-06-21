@@ -1,21 +1,22 @@
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f0f2f5;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
-    display: flex; /* Use flexbox for overall layout */
+    display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align content to the top */
+    align-items: flex-start;
     min-height: 100vh;
 }
 
 .main-dashboard-wrapper {
-    max-width: 1400px; /* Increased max-width for more content */
+    max-width: 1400px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Space between sections */
+    gap: 30px;
 }
 
 .dashboard-header {
@@ -42,7 +43,7 @@ body {
 
 .dashboard-charts-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted for chart cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -59,7 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 150px; /* Adjust as needed */
+    min-height: 150px;
 }
 
 .card-header {
@@ -137,35 +138,181 @@ body {
 
 /* Specific styles for chart cards */
 .chart-card {
-    /* The base .card styles already provide padding, background, shadow, etc. */
     text-align: center;
 }
 
 .chart-card h2 {
-    /* font-size: 1.5rem; */
+    font-size: 1.5rem;
     color: #343a40;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .chart-card canvas {
-    max-width: 100%; /* Ensure canvas is responsive */
-    height: 300px; /* Fixed height for charts for consistency */
+    max-width: 100%;
+    height: 250px;
+}
+
+/* NEW SECTION: Recent Activities and Quick Actions Styling */
+.dashboard-secondary-widgets {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Recent Activities wider than Quick Actions */
+    gap: 20px;
+    align-items: flex-start; /* Align the top of the cards */
+}
+
+/* Recent Activities Card */
+.recent-activities-card h2 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.activity-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.activity-icon-box i {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Activity Icon Box Colors (consistent with metric cards) */
+.activity-blue { background-color: #e0f2fe; }
+.activity-blue i { color: #3b82f6; }
+
+.activity-green { background-color: #ecfdf5; }
+.activity-green i { color: #22c55e; }
+
+.activity-orange { background-color: #fff7ed; }
+.activity-orange i { color: #f97316; }
+
+.activity-purple { background-color: #f5edff; }
+.activity-purple i { color: #a855f7; }
+
+.activity-content {
+    flex-grow: 1;
+}
+
+.activity-description {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #343a40;
+    font-weight: 500;
+}
+
+.activity-time {
+    margin: 5px 0 0;
+    font-size: 0.8rem;
+    color: #9da3ab;
+}
+
+/* Quick Actions Card */
+.quick-actions-card {
+    display: flex;
+    flex-direction: column;
+    height: 85%; /* Make Quick Actions card fill height of its grid cell */
+}
+
+.quick-actions-card h2 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+    flex-grow: 1; /* Allow buttons container to grow */
+    justify-content: space-between; /* Distribute buttons vertically */
+}
+
+.btn {
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+}
+
+.btn i {
+    font-size: 20px;
+}
+
+.btn-primary {
+    background-color: #3b82f6; /* Blue */
+    height: 60px;
+    width: 400px;
+}
+
+.btn-orange {
+    background-color: #f97316; /* Orange */
+    height: 60px;
+    width: 400px;
 }
 
 
+.btn-green {
+    background-color: #22c55e; /* Green */
+    height: 60px;
+    width: 400px;
+}
+
+.btn-purple {
+    background-color: #a855f7; /* Purple */
+    height: 60px;
+    width: 400px;
+}
+
+
+
 /* Responsive adjustments */
-@media (max-width: 10px) {
+@media (max-width: 1024px) {
     .dashboard-charts-container {
-        grid-template-columns: 1fr; /* Stack charts on smaller screens */
+        grid-template-columns: 1fr;
     }
     .chart-card canvas {
-        height: 20px; /* Adjust height for smaller screens */
+        height: 200px;
+    }
+    .dashboard-secondary-widgets {
+        grid-template-columns: 1fr; /* Stack recent activities and quick actions */
     }
 }
 
 @media (max-width: 768px) {
     .dashboard-metrics-container {
-        grid-template-columns: 1fr; /* Stack metric cards on smaller screens */
+        grid-template-columns: 1fr;
     }
     .main-dashboard-wrapper {
         padding: 10px;
@@ -178,5 +325,15 @@ body {
     }
     .card {
         padding: 20px;
+    }
+    .chart-card canvas {
+        height: 180px;
+    }
+    .activity-item {
+        padding: 10px 0; /* Less padding for activity items on small screens */
+    }
+    .btn {
+        padding: 10px 12px; /* Smaller button padding */
+        font-size: 0.9rem;
     }
 }
