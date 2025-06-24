@@ -1,0 +1,542 @@
+/* General Body and Container Styles */
+body {
+ font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.exam-details{
+  width: 100%;
+  padding: 20px 10px;
+}
+.container {
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.main-content {
+    /* Reverted to original flex ratio for main content */
+    flex: 3;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-panel {
+    /* Adjusted flex to make side panel wider, while main content is smaller */
+    flex: 1.5; /* This makes the side panel take more relative space than original flex:1 */
+    min-width: 350px; /* Increased minimum width for side panel to ensure it's wide enough */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Common Panel/Section Styling */
+.exam-header-section,
+.info-card,
+.about-exam-section,
+.exam-pattern-section,
+.eligibility-criteria-section,
+.important-dates-section,
+.panel {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Exam Header Section */
+.exam-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exam-header-section h1 {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.status.open {
+    background-color: #e6ffe6;
+    color: #28a745;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Information Grid - This is where the width of key info and registration details is controlled */
+.exam-info-grid {
+    display: grid;
+    /* Reverted to original minmax values to keep cards original width */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.info-card h2 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-card li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #555;
+}
+
+.info-card li:last-child {
+    margin-bottom: 0;
+}
+
+.info-card li i {
+    font-size: 18px;
+    color: #888;
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.info-card li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card li div span {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 3px;
+}
+
+.info-card li div strong {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* About Exam Section */
+.about-exam-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.about-exam-section p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-exam-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Exam Pattern Section */
+.exam-pattern-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.exam-pattern-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.exam-pattern-section th,
+.exam-pattern-section td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.exam-pattern-section thead th {
+    background-color: #f8f8f8;
+    font-weight: 600;
+    color: #555;
+}
+
+.exam-pattern-section tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+.exam-pattern-section tfoot td {
+    background-color: #e6f7ff;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.exam-pattern-section .important-note {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 14px;
+    color: #856404;
+}
+
+.exam-pattern-section .important-note i {
+    font-size: 20px;
+    color: #ffc107;
+    flex-shrink: 0;
+}
+
+.exam-pattern-section .important-note p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Eligibility Criteria Section */
+.eligibility-criteria-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.eligibility-criteria-section .criteria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.eligibility-criteria-section .criteria-group h3 {
+    font-size: 16px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #eee;
+}
+
+.eligibility-criteria-section .criteria-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.eligibility-criteria-section .criteria-group li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.eligibility-criteria-section .criteria-group li i {
+    color: #28a745;
+    margin-right: 8px;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Important Dates Section */
+.important-dates-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.important-dates-section .dates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.important-dates-section .date-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.important-dates-section .date-item.blue {
+    background-color: #e6f7ff;
+}
+.important-dates-section .date-item.orange {
+    background-color: #fff2e6;
+}
+.important-dates-section .date-item.green {
+    background-color: #e6ffe6;
+}
+.important-dates-section .date-item.purple {
+    background-color: #ebe6ff;
+}
+
+.important-dates-section .date-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.important-dates-section .date-info strong {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.important-dates-section .date-info span {
+    font-size: 13px;
+    color: #666;
+}
+
+.important-dates-section .date-value {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.important-dates-section .date-item.blue .date-value {
+    color: #007bff;
+}
+.important-dates-section .date-item.orange .date-value {
+    color: #fd7e14;
+}
+.important-dates-section .date-item.green .date-value {
+    color: #28a745;
+}
+.important-dates-section .date-item.purple .date-value {
+    color: #6f42c1;
+}
+
+
+/* Side Panel Styling */
+.panel h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Quick Actions Panel */
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background-color: #d8dee3;
+}
+
+/* Exam Statistics Panel */
+.exam-statistics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exam-statistics li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.exam-statistics li:not(:last-child) {
+    border-bottom: 1px dashed #eee;
+}
+
+.exam-statistics li span {
+    font-weight: 600;
+    color: #333;
+}
+
+.green-text {
+    color: #28a745;
+}
+.orange-text {
+    color: #fd7e14;
+}
+.blue-text {
+    color: #007bff;
+}
+
+/* Related Exams Panel */
+.related-exams ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-exams li {
+    background-color: #f8f8f8;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    color: #333;
+}
+
+.related-exams li:last-child {
+    margin-bottom: 0;
+}
+
+.related-exams li strong {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.related-exams li span {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Help & Support Panel */
+.help-support .btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.help-support .btn-secondary i {
+    font-size: 18px;
+    color: #007bff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .main-content,
+    .side-panel {
+        min-width: unset;
+        flex: none;
+        width: 100%;
+    }
+    .exam-header-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .exam-header-section h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+    }
+    .exam-header-section,
+    .info-card,
+    .about-exam-section,
+    .exam-pattern-section,
+    .eligibility-criteria-section,
+    .important-dates-section,
+    .panel {
+        padding: 20px;
+    }
+    .exam-header-section h1 {
+        font-size: 22px;
+    }
+    .info-card h2, .about-exam-section h2, .panel h2, .exam-pattern-section h2, .eligibility-criteria-section h2, .important-dates-section h2 {
+        font-size: 18px;
+    }
+    .exam-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-card li {
+        flex-wrap: wrap;
+    }
+    .info-card li i {
+        margin-bottom: 5px;
+    }
+    .exam-pattern-section table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .exam-pattern-section table thead,
+    .exam-pattern-section table tbody,
+    .exam-pattern-section table tfoot,
+    .exam-pattern-section table tr,
+    .exam-pattern-section table th,
+    .exam-pattern-section table td {
+        white-space: nowrap;
+    }
+    .exam-pattern-section .important-note {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .eligibility-criteria-section .criteria-grid {
+        grid-template-columns: 1fr;
+    }
+    .important-dates-section .date-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}

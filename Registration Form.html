@@ -4,37 +4,256 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form </title>
-    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="registrationform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2kZI/lM8p+noFjRQQJ1FYxCfT+BLaR/WwRsrQx5sCjoN/zABz/uYwDChJbA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+<div class="registration-form">
     <h1> Registration Form </h1>
     <h3>Complete your exam registration in simple steps</h3>
-  <div class="progress-container">
-    <div class="header">
-      <h2>Registration Progress</h2>
-      <span class="step-count">Step 1 of 4</span>
+    <div class="main-wrapper">
+        <div class="registration-progress-section">
+            <span class="step-label">Registration Progress</span>
+            <span class="step-counter">Step 1 of 4</span>
+            <div class="progress-bar-container">
+                <div class="progress-step active">
+                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                    <span class="step-text">1 Personal Details</span>
+                </div>
+                <div class="progress-line active"></div>
+                <div class="progress-step">
+                    <div class="step-circle">2</div>
+                    <span class="step-text">Educational Details</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-circle">3</div>
+                    <span class="step-text">Upload Documents</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-circle">4</div>
+                    <span class="step-text">Payment</span>
+                </div>
+            </div>
+        </div>
+        <div class="content-area-wrapper">
+            <div class="form-content-main">
+                <div class="form-card">
+                    <h2>Personal Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" placeholder="Enter your last name">
+                        </div>
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name *</label>
+                            <input type="text" id="fatherName" placeholder="Enter father's name">
+                        </div>
+                        <div class="form-group">
+                            <label for="motherName">Mother's Name *</label>
+                            <input type="text" id="motherName" placeholder="Enter mother's name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h2>Contact Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobileNumber">Mobile Number *</label>
+                            <input type="tel" id="mobileNumber" placeholder="Enter 10-digit mobile number">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="permanentAddress">Permanent Address *</label>
+                            <input type="text" id="permanentAddress" placeholder="Enter your permanent address">
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State *</label>
+                            <select id="state">
+                                <option>Select State</option>
+                                <option>Andhra Pradesh </option>
+                                <option>Bihar </option>
+                                <option>Delhi </option>
+                                <option>Gujarat</option>
+                                <option>Maharashtra </option>
+                                <option>Rajasthan </option>
+                                <option>Uttar Pradesh</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="district">District *</label>
+                            <select id="district">
+                                <option>Select District</option>
+                                <option> Alipurduar</option>
+                                <option> Bankura</option>
+                                <option> Howrah</option>
+                                <option> Hooghly </option>
+                                <option> Kolkata</option>
+                                <option> Malda </option>
+                                <option> Jhargram </option>
+                                <option> Dakshin Dinajpur </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pinCode">PIN Code *</label>
+                            <input type="text" id="pinCode" placeholder="Enter PIN code">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <h2>Personal Details</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <div class="input-with-icon">
+                                <input type="date" id="dob">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender">
+                                <option>Select Gender</option>
+                                <option>Male</option>
+                                <option>Female </option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category *</label>
+                            <select id="category">
+                                <option>Select Category</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nationality">Nationality *</label>
+                            <select id="nationality">
+                                <option>Select Nationality</option>
+                                <option> Indian </option>
+                                <option> Other </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="religion">Religion</label>
+                            <select id="religion">
+                                <option>Select Religion</option>
+                                <option> Hindu </option>
+                                <option> Muslim </option>
+                                <option>Christian</option>
+                                <option> Sikh </option>
+                                <option> Buddhist </option>
+                                <option> Jain </option>
+                                <option> Other </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+      <div class="identifaction-details">
+                <div class="form-card">
+                    <h2>Identification Details</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="aadhaarNumber">Aadhaar Number *</label>
+                            <input type="text" id="aadhaarNumber" placeholder="Enter 12-digit Aadhaar number">
+                        </div>
+                        <div class="form-group">
+                            <label for="panNumber">PAN Number</label>
+                            <input type="text" id="panNumber" placeholder="Enter PAN number">
+                        </div>
+                    </div>
+                </div>  
+                <div class="form-card">
+                    <h2>Exam Preferences</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="prefExamState">Preferred Exam Center State *</label>
+                            <select id="prefExamState">
+                                <option>Select State</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="prefExamCity">Preferred Exam Center City *</label>
+                            <select id="prefExamCity">
+                                <option>Select City</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Medium of Examination *</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="examMedium" value="english" checked> English</label>
+                                <label><input type="radio" name="examMedium" value="hindi"> Hindi</label>
+                                <label><input type="radio" name="examMedium" value="bilingual"> Bilingual (English & Hindi)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>                
+                <div class="form-actions">
+                    <button class="btn btn-secondary">Save as Draft</button>
+                    <div>
+                        <button class="btn btn-secondary">Previous</button>
+                        <button class="btn btn-primary">Next Step</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-sidebar">
+                <div class="sidebar-panel exam-information">
+                    <h2>Exam Information</h2>
+                    <ul>
+                        <li>
+                            <span>Exam Name</span>
+                            <strong>SSC CGL 2025</strong>
+                        </li>
+                        <li>
+                            <span>Registration Fee</span>
+                            <strong>₹100 (Gen/OBC)</strong>
+                        </li>
+                        <li>
+                            <span>Last Date</span>
+                            <strong class="orange-text">15 Jan 2025</strong>
+                        </li>
+                        <li>
+                            <span>Exam Date</span>
+                            <strong>25 Feb 2025</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-panel required-documents">
+                    <h2>Required Documents</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Passport Size Photo</li>
+                        <li><i class="fas fa-check"></i> Signature</li>
+                        <li><i class="fas fa-check"></i> Educational Certificates</li>
+                        <li><i class="fas fa-check"></i> Category Certificate</li>
+                        <li><i class="fas fa-check"></i> Aadhaar Card</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-panel important-guidelines">
+                    <h2>Important Guidelines</h2>
+                    <ul>
+                        <li><i class="fas fa-exclamation-triangle"></i> Fill all mandatory fields marked with *</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> Double-check all information before proceeding</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> Keep all documents ready for upload</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> Save your progress regularly</li>
+                    </ul>
+                    <button class="btn btn-secondary help-button"><i class="fas fa-question-circle"></i> Need Help?</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="stepper">
-      <div class="step active">
-        <div class="circle">1</div>
-        <span class="label active-label">Personal Details</span>
-        <div class="bar active-bar"></div>
-      </div>
-      <div class="step">
-        <div class="circle">2</div>
-        <span class="label">Educational Details</span>
-        <div class="bar"></div>
-      </div>
-      <div class="step">
-        <div class="circle">3</div>
-        <span class="label">Upload Documents</span>
-        <div class="bar"></div>
-      </div>
-      <div class="step">
-        <div class="circle">4</div>
-        <span class="label">Payment</span>
-      </div>
-    </div>
-  </div>
+</div>
 </body>
 </html>
+

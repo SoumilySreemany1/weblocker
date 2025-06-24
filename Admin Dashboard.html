@@ -1,73 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard </title>
-     <link rel = "stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exam Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="admindashboard.css"/>
 </head>
 <body>
+<div class="admin-dashboard">
     <h1> Admin Dashboard </h1>
     <h3>Comprehensive exam portal management system </h3>
-<div class="stats-container">
-    <div class="card">
-      <div class="card-header">
-        <div>
-          <p class="title">Total Exams</p>
-          <h2>156</h2>
-        </div>
-        <div class="icon blue">
-          📋
-        </div>
-      </div>
-      <p class="change green">+12 <span>this month</span></p>
+  <div class="dashboard-container">
+    <!-- Top Summary Cards -->
+    <div class="cards-row">
+      <div class="card blue"><h4>Total Exams</h4><h2>156</h2><p>+12 this month</p></div>
+      <div class="card orange"><h4>Total Registrations</h4><h2>45,892</h2><p>+2,847 this week</p></div>
+      <div class="card green"><h4>Active Users</h4><h2>12,456</h2><p>+8% from last month</p></div>
+      <div class="card purple"><h4>Total Revenue</h4><h2>₹18.2L</h2><p>+15% from last quarter</p></div>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <div>
-          <p class="title">Total Registrations</p>
-          <h2>45,892</h2>
+    <!-- Analytics & Actions -->
+    <div class="middle-section">
+      <div class="analytics">
+        <div class="header-row">
+          <h3>Registration Analytics</h3>
+          <select>
+            <option>Last 7 days</option>
+          </select>
         </div>
-        <div class="icon orange">
-          👤
-        </div>
+        <div class="analytics-placeholder"></div>
       </div>
-      <p class="change green">+2,847 <span>this week</span></p>
+
+      <div class="quick-actions">
+        <h3>Quick Actions</h3>
+        <button class="btn blue">+ Add New Exam</button>
+        <button class="btn orange">📢 Create Announcement</button>
+        <button class="btn green">📄 Generate Report</button>
+        <button class="btn purple">👥 Manage Users</button>
+      </div>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <div>
-          <p class="title">Active Users</p>
-          <h2>12,456</h2>
-        </div>
-        <div class="icon green-bg">
-          👥
-        </div>
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+      <div class="categories">
+        <h3>Exam Categories Distribution</h3>
+        <div class="categories-placeholder"></div>
       </div>
-      <p class="change green">+8% <span>from last month</span></p>
+
+      <div class="activity">
+        <h3>Recent Activity</h3>
+        <ul>
+          <li><span class="icon blue">👤</span><div><b>New user registration</b><br/>Rajesh Kumar registered for SSC CGL<br/><small>2 minutes ago</small></div></li>
+          <li><span class="icon green">✔</span><div><b>Exam schedule updated</b><br/>UPSC CSE dates modified<br/><small>15 minutes ago</small></div></li>
+          <li><span class="icon orange">📢</span><div><b>New announcement</b><br/>Important notice published<br/><small>1 hour ago</small></div></li>
+          <li><span class="icon purple">📄</span><div><b>Admit cards generated</b><br/>RRB NTPC admit cards ready<br/><small>3 hours ago</small></div></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="card">
-      <div class="card-header">
-        <div>
-          <p class="title">Total Revenue</p>
-          <h2>₹18.2L</h2>
-        </div>
-        <div class="icon purple">
-          💲
-        </div>
+    <!-- Exams and Status -->
+    <div class="bottom-section">
+      <div class="recent-exams">
+        <h3>Recent Exams <a href="#">View All</a></h3>
+        <table>
+          <thead><tr><th>Exam</th><th>Status</th><th>Registrations</th></tr></thead>
+          <tbody>
+            <tr><td>SSC CGL<br/><small>25 Feb 2025</small></td><td><span class="status active">Active</span></td><td>2,847</td></tr>
+            <tr><td>UPSC CSE<br/><small>15 Jun 2025</small></td><td><span class="status closed">Closed</span></td><td>1,234</td></tr>
+            <tr><td>IBPS PO<br/><small>15 Mar 2025</small></td><td><span class="status active">Active</span></td><td>3,456</td></tr>
+          </tbody>
+        </table>
       </div>
-      <p class="change green">+15% <span>from last quarter</span></p>
+
+      <div class="system-status">
+        <h3>System Status</h3>
+        <ul>
+          <li><span class="dot green"></span> Database – <b>Operational</b></li>
+          <li><span class="dot green"></span> Payment Gateway – <b>Operational</b></li>
+          <li><span class="dot yellow"></span> Email Service – <b>Degraded</b></li>
+          <li><span class="dot green"></span> File Storage – <b>Operational</b></li>
+          <li><span class="dot green"></span> API Services – <b>Operational</b></li>
+        </ul>
+        <p>Server Uptime: <b>99.9%</b></p>
+        <p>Last Backup: <b>2 hours ago</b></p>
+      </div>
     </div>
   </div>
-
-
-
-
-
-
-
+</div>
 </body>
 </html>

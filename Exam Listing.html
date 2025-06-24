@@ -4,9 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam Listing</title>
+    <link rel="stylesheet" href="examlisting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2kZI/lM8p+noFjRQQJ1FYxCfT+BLaR/WwRsrQx5sCjoN/zABz/uYwDChJbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+<div class="examlisting">
     <h1>Exam Listing</h1>
-    <h3>Browse and register for government exams <h3>
+    <h3>Browse and register for government exams </h3>
+    <div class="container">
+        <div class="search-filters">
+            <div class="filter-group">
+                <label for="searchExam">Search Exams</label>
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchExam" placeholder="Search by exam name...">
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="category">Category</label>
+                <select id="category">
+                 <option value="all">All Categories</option>
+                    <option value="ssc">SSC</option>
+                    <option value="upsc">UPSC</option>
+                    <option value="banking">Banking</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="status">Status</label>
+                <select id="status">
+                    <option value="all" >All Status</option>
+                    <option value="open">Registration Open</option>
+                    <option value="closed">Registration Closed</option>
+                </select>
+            </div>
+        </div>
+        <div class="exam-cards-grid">
+            <div class="exam-card">
+                <div class="card-header">
+                    <span class="status open">Registration Open</span>
+                    <span class="exam-type">SSC</span>
+                </div>
+                <h3 class="exam-title">Staff Selection Commission Combined Graduate Level</h3>
+                <p class="exam-description">Recruitment for Group B and Group C posts in various ministries</p>
+                <div class="exam-details">
+                    <p><i class="far fa-calendar"></i> Registration: 15 Dec 2024 - 15 Jan 2025</p>
+                    <p><i class="far fa-calendar"></i> Exam Date: 25 Feb 2025</p>
+                    <p><i class="fas fa-dollar-sign"></i> Fee: ₹100 (Gen/OBC), ₹0 (SC/ST/Women)</p>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-primary">Register Now</button>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+            </div>
+            <div class="exam-card">
+                <div class="card-header">
+                    <span class="status closed">Registration Closed</span>
+                    <span class="exam-type">UPSC</span>
+                </div>
+                <h3 class="exam-title">Civil Services Examination</h3>
+                <p class="exam-description">Recruitment for IAS, IPS, IFS and other Group A services</p>
+                <div class="exam-details">
+                    <p><i class="far fa-calendar"></i> Registration: 01 Oct 2024 - 31 Oct 2024</p>
+                    <p><i class="far fa-calendar"></i> Exam Date: 15 Jun 2025</p>
+                    <p><i class="fas fa-dollar-sign"></i> Fee: ₹200 (Gen/OBC), ₹0 (SC/ST/Women)</p>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-secondary disabled">Registration Closed</button>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+            </div>
+            <div class="exam-card">
+                <div class="card-header">
+                    <span class="status open">Registration Open</span>
+                    <span class="exam-type">Banking</span>
+                </div>
+                <h3 class="exam-title">IBPS PO</h3>
+                <p class="exam-description">Probationary Officer recruitment in public sector banks</p>
+                <div class="exam-details">
+                    <p><i class="far fa-calendar"></i> Registration: 20 Dec 2024 - 20 Jan 2025</p>
+                    <p><i class="far fa-calendar"></i> Exam Date: 15 Mar 2025</p>
+                    <p><i class="fas fa-dollar-sign"></i> Fee: ₹850 (Gen/OBC), ₹175 (SC/ST/PWD)</p>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-primary">Register Now</button>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="exam-cards-grid">
+            <div class="exam-card">
+                <div class="card-header">
+                    <span class="status open upcom">Upcoming </span>
+                    <span class="exam-type"> Railway </span>
+                </div>
+                <h3 class="exam-title"> RRB NTPC </h3>
+                <p class="exam-description"> Non-Technical Popular Categories recruitment </p>
+                <div class="exam-details">
+                    <p><i class="far fa-calendar"></i>  Registration: 01 Feb 2025 - 28 Feb 2025 </p>
+                    <p><i class="far fa-calendar"></i> Exam Date: 15 Apr 2025 </p>
+                    <p><i class="fas fa-dollar-sign"></i>Fee: ₹500 (Gen/OBC), ₹250 (SC/ST)</p>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-primary disabled"> Coming Soon </button>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+            </div>
+            <div class="exam-card">
+                <div class="card-header">
+                    <span class="status open">Registration Open </span>
+                    <span class="exam-type">UPSC</span>
+                </div>
+                <h3 class="exam-title"> MPPSC State Service </h3>
+                <p class="exam-description">Madhya Pradesh Public Service Commission recruitment</p>
+                <div class="exam-details">
+                    <p><i class="far fa-calendar"></i>Registration: 10 Dec 2024 - 10 Jan 2025</p>
+                    <p><i class="far fa-calendar"></i>Exam Date: 20 Mar 2025</p>
+                    <p><i class="fas fa-dollar-sign"></i> Fee: ₹500 (Gen/OBC), ₹250 (SC/ST)</p>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-primary ">Register Now </button>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+            </div>
+            <div class="exam-card">
+                <div class="card-header">
+                    <span class="status open comp"> Completed </span>
+                    <span class="exam-type"> Defense </span>
+                </div>
+                <h3 class="exam-title"> NDA & NA Examination </h3>
+                <p class="exam-description">National Defence Academy and Naval Academy recruitment</p>
+                <div class="exam-details">
+                    <p><i class="far fa-calendar"></i>  Registration: 01 Aug 2024 - 31 Aug 2024 </p>
+                    <p><i class="far fa-calendar"></i> Exam Date: 15 Nov 2024 </p>
+                    <p><i class="fas fa-dollar-sign"></i>Fee: ₹100 (All Categories)</p>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-primary disabled ">Exam Completed </button>
+                    <button class="btn btn-secondary">View Results </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
+
+
+
+
+

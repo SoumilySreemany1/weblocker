@@ -1,0 +1,410 @@
+/* General Body and Container Styles */
+body {
+font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.registration-form{
+  width: 100%;
+  padding: 20px 10px;
+}
+/* Overall wrapper for the entire page content */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Registration Progress Header Section */
+.registration-progress-section {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registration-progress-section .step-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.registration-progress-section .step-counter {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #999;
+    flex-shrink: 0;
+}
+
+.progress-step.active {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.progress-step .step-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active .step-circle {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.progress-step.active .step-circle i {
+    font-size: 16px;
+}
+
+.progress-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin: 0 10px;
+}
+
+.progress-line.active {
+    background-color: #007bff;
+}
+
+/* Content Area Wrapper - holds the form and the main sidebar */
+.content-area-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.form-content-main {
+    flex: 3;
+    min-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-sidebar {
+    flex: 1.5;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Common Card/Panel Styling */
+.form-card, .sidebar-panel {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2, .sidebar-panel h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Form Grid for input fields */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Optional wrapper retained for layout spacing */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Removed .input-with-icon i styling as it's no longer used */
+
+/* Radio Button Group */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Form Navigation Buttons */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-top: 10px;
+}
+
+.form-actions > div {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background-color: #d8dee3;
+}
+
+.help-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Sidebar Panels */
+.sidebar-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-panel.exam-information li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.sidebar-panel.exam-information li:not(:last-child) {
+    border-bottom: 1px dashed #eee;
+}
+
+.sidebar-panel.exam-information li span {
+    font-size: 14px;
+    color: #777;
+}
+
+.sidebar-panel.exam-information li strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.sidebar-panel .orange-text {
+    color: #fd7e14;
+}
+.sidebar-panel .green-text {
+    color: #28a745;
+}
+.sidebar-panel .blue-text {
+    color: #007bff;
+}
+
+.sidebar-panel.required-documents ul,
+.sidebar-panel.important-guidelines ul {
+    margin-bottom: 20px;
+}
+
+.sidebar-panel.required-documents li,
+.sidebar-panel.important-guidelines li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.sidebar-panel.required-documents li i::before  {
+    content: "✔";
+    color: #28a745;
+    margin-right: 10px;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.sidebar-panel.important-guidelines li i::before  {
+    content: "⚠";
+    color: #ffc107;
+    margin-right: 10px;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .content-area-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .form-content-main,
+    .right-sidebar {
+        min-width: unset;
+        flex: none;
+        width: 100%;
+    }
+    .registration-progress-section .progress-bar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .progress-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    .progress-line {
+        width: 50px;
+        flex-grow: unset;
+    }
+    .form-actions {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .form-actions > div {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .btn {
+        width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+    }
+    .registration-progress-section,
+    .form-card,
+    .sidebar-panel,
+    .form-actions {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .registration-progress-section .step-label {
+        font-size: 16px;
+    }
+    .registration-progress-section .step-counter {
+        font-size: 12px;
+    }
+}

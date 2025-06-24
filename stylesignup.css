@@ -1,94 +1,106 @@
-/* Reset & Base Styles */
-* {
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-.login, html {
-  font-family: 'Inter', sans-serif;
-  background-color: #f9fafb;
-  min-height: 100vh;
-}
-
-/* Heading Section */
-.login-heading {
-  width: 100%;
-  padding: 20px 10px;
-}
-.login-content
-{
-justify-content: space-between;
-align-items: center; 
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
 }
 
-/* Heading above form */
-.heading {
-  font-size: 40px;
-  margin-bottom: 20px;
-  font-family: 'Poppins', 'Open Sans', 'Inter', sans-serif;
+h1 {
   text-align: center;
-  color: black;
+  color: #111;
+  margin-bottom: 30px;
 }
 
-/* Form Box */
-.form-box {
-  background: white;
-  border-radius: 12px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-}
-
-.form-box form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-box label {
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.form-box input[type="email"],
-.form-box input[type="password"] {
-  padding: 12px;
+.form-group {
   margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 1rem;
+  box-sizing: border-box;
 }
 
-.checkbox {
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-  color: #444;
+.input-row {
   display: flex;
-  align-items: center;
+  gap: 15px;
 }
 
-.checkbox input {
-  margin-right: 10px;
+.input-row .form-group {
+  flex: 1;
 }
 
-.form-box button {
-  padding: 14px;
-  background: rgb(37, 99, 235);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
+  font-size: 16px;
+  color: #777;
 }
 
+.password-rules {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #555;
+  list-style: none;
+}
 
+.password-rules li {
+  margin-bottom: 4px;
+}
 
+.checkbox-group {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.checkbox-group label {
+  color: #333;
+}
+
+.checkbox-group a {
+  color: #4169e1;
+  text-decoration: none;
+}
+
+.create-account-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+}

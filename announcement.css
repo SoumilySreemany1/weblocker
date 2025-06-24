@@ -1,0 +1,489 @@
+/* General Body and Container Styles */
+body {
+    font-family: 'Inter', sans-serif; /* Using a common clean font */
+    background-color: #f0f2f5; /* Light gray background */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  padding: 20px 10px;
+}
+
+/* Search and Filter Section */
+.search-filters {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow filters to wrap on smaller screens */
+    align-items: flex-end; /* Align labels and inputs better */
+}
+
+.filter-group {
+    flex: 1; /* Distribute space among filter groups */
+    min-width: 200px; /* Minimum width for each filter group */
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input-wrapper .fas.fa-search {
+    position: absolute;
+    left: 15px;
+    color: #888;
+}
+
+.search-filters input[type="text"],
+.search-filters select {
+    width: 100%;
+    padding: 12px 15px 12px 45px; /* Adjust padding for search icon */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #333;
+    -webkit-appearance: none; /* Remove default select styling for custom arrow */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fdfdfd;
+}
+
+.search-filters select {
+    padding-left: 15px; /* No icon in select, so default padding */
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%, 0 0;
+    background-size: 12px auto, 100%;
+}
+
+
+/* Main Content Layout (Announcements List + Side Panels) */
+.main-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    align-items: flex-start; /* Align content to the top */
+}
+
+.announcements-list {
+    flex: 2; /* Takes more space than side panels */
+    min-width: 450px; /* Minimum width before wrapping */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-panels {
+    flex: 1; /* Takes less space */
+    min-width: 280px; /* Minimum width before wrapping */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Announcement Card Styling */
+.announcement-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.announcement-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.announcement-card .tags {
+    display: flex;
+    gap: 10px;
+}
+
+.announcement-card .tag {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Tag Colors */
+.tag.urgent {
+    background-color: #fcebeb; /* Light red */
+    color: #dc3545; /* Darker red */
+}
+.tag.high {
+    background-color: #fff2e6; /* Light orange */
+    color: #fd7e14; /* Darker orange */
+}
+.tag.medium {
+    background-color: #fffbe6; /* Light yellow */
+    color: #ffc107; /* Darker yellow */
+}
+.tag.low { /* New tag color */
+    background-color: #e6f9ff; /* Light cyan */
+    color: #17a2b8; /* Darker cyan (info color) */
+}
+.tag.exam-dates {
+    background-color: #e6f7ff; /* Light blue */
+    color: #007bff; /* Darker blue */
+}
+.tag.admit-cards {
+    background-color: #e6ffe6; /* Light green */
+    color: #28a745; /* Darker green */
+}
+.tag.registration {
+    background-color: #ebe6ff; /* Light purple */
+    color: #6f42c1; /* Darker purple */
+}
+.tag.results { /* New tag color */
+    background-color: #f0e6ff; /* Light violet */
+    color: #6610f2; /* Darker violet */
+}
+
+
+.announcement-card .time-ago {
+    font-size: 13px;
+    color: #888;
+}
+
+.announcement-card .announcement-title {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.announcement-card .announcement-excerpt {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.announcement-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.announcement-card .read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.announcement-card .read-more:hover {
+    text-decoration: underline;
+}
+
+.announcement-card .actions span {
+    font-size: 13px;
+    color: #666;
+    margin-left: 15px;
+}
+
+.announcement-card .actions span i {
+    margin-right: 5px;
+    color: #888;
+}
+
+/* Load More Button */
+.load-more-btn {
+    display: block;
+    width: fit-content;
+    padding: 12px 30px;
+    margin: 20px auto 0 auto; /* Center button */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Side Panel Styling */
+.panel {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.panel h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.panel h3 { /* For "Stay Updated" panel title */
+    font-size: 18px;
+    color: #fff; /* White text for purple background */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.panel p { /* For "Stay Updated" panel description */
+    font-size: 14px;
+    color: #eee;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+/* Quick Stats Panel */
+.quick-stats ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-stats li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.quick-stats li:not(:last-child) {
+    border-bottom: 1px dashed #eee;
+}
+
+.quick-stats li span {
+    font-weight: 600;
+    color: #333;
+}
+
+.quick-stats li.green span {
+    color: #28a745; /* Success green */
+}
+.quick-stats li.red span {
+    color: #dc3545; /* Danger red */
+}
+.quick-stats li.orange span {
+    color: #fd7e14; /* Warning orange */
+}
+
+/* Recent Updates Panel */
+.recent-updates ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-updates li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.recent-updates li:not(:last-child) {
+    border-bottom: 1px dashed #eee;
+}
+
+.recent-updates .time-ago-small {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.recent-updates li p {
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Notification Settings Panel */
+.notification-settings .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.notification-settings input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #007bff; /* To style the checkbox */
+}
+
+.notification-settings label {
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+}
+
+.notification-settings .update-pref-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notification-settings .update-pref-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Stay Updated Panel */
+.stay-updated-panel {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradient background */
+    color: #fff;
+    text-align: center;
+    padding: 30px 25px; /* Adjust padding for visual appeal */
+}
+
+.stay-updated-panel h3 {
+    margin-top: 0;
+}
+
+.stay-updated-panel input[type="email"] {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 12px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.stay-updated-panel input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stay-updated-panel .subscribe-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #fff; /* White button */
+    color: #007bff; /* Blue text */
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+}
+
+.stay-updated-panel .subscribe-btn:hover {
+    background-color: #e6e6e6; /* Light gray on hover */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column; /* Stack main content and side panels */
+    }
+
+    .announcements-list,
+    .side-panels {
+        min-width: unset; /* Allow full width */
+        flex: none; /* Remove flex grow/shrink */
+        width: 100%;
+    }
+
+    .search-filters {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        min-width: unset;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 15px;
+    }
+    .search-filters {
+        padding: 20px;
+    }
+    .announcement-card,
+    .panel {
+        padding: 20px;
+    }
+    .announcement-card .card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .announcement-card .actions {
+        margin-left: 0;
+    }
+    .announcement-card .actions span {
+        margin-left: 0;
+        margin-right: 15px; /* Add some spacing between views and share */
+    }
+    .stay-updated-panel input[type="email"] {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,53 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announcements</title>
-    <link rel = "stylesheet" href="style.css">
+    <title>Announcements Dashboard</title>
+    <link rel="stylesheet" href="announcement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2kZI/lM8p+noFjRQQJ1FYxCfT+BLaR/WwRsrQx5sCjoN/zABz/uYwDChJbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<div>
+    <div class="container">
     <h1> Announcements </h1>
     <h3>Stay updated with latest exam notifications and important updates</h3>
-</div>
-<div class="search-filter-container">
-  <div class="filter-item">
-    <label for="search">Search Announcements</label>
-    <div class="search-input">
-      <span class="icon"></span>
-      <input type="text" id="search" placeholder=" 🔍 Search by title or content..." />
+        <div class="search-filters">
+            <div class="filter-group">
+                <label for="searchAnnouncements">Search Announcements</label>
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchAnnouncements" placeholder=" 🔍 Search by title or content...">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="all">All Categories</option>
+                    <option value="exam_dates">Exam Dates</option>
+                    <option value="admit_cards">Admit Cards</option>
+                    <option value="registration">Registration</option>
+                    <option value="results">Results</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="priority">Priority</label>
+                <select id="priority">
+                    <option value="all">All Priorities</option>
+                    <option value="urgent">Urgent</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="announcements-list">
+                <div class="announcement-card">
+                    <div class="card-header">
+                        <div class="tags">
+                            <span class="tag urgent">Urgent</span>
+                            <span class="tag exam-dates">Exam Dates</span>
+                        </div>
+                        <span class="time-ago">2 hours ago</span>
+                    </div>
+                    <h3 class="announcement-title">SSC CGL 2025 Exam Date Postponed</h3>
+                    <p class="announcement-excerpt">Due to unforeseen circumstances, the SSC CGL 2025 examination scheduled for 25th February has been postponed. New dates will be announced soon. All registered candidates will be notified via email and SMS.</p>
+                    <div class="card-footer">
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="actions">
+                            <span><i class="far fa-eye"></i> 2,847 views</span>
+                            <span><i class="fas fa-share-alt"></i> Share</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="card-header">
+                        <div class="tags">
+                            <span class="tag high">High</span>
+                            <span class="tag admit-cards">Admit Cards</span>
+                        </div>
+                        <span class="time-ago">1 day ago</span>
+                    </div>
+                    <h3 class="announcement-title">IBPS PO Admit Cards Released</h3>
+                    <p class="announcement-excerpt">Admit cards for IBPS PO 2025 examination are now available for download. Candidates can download their hall tickets from the official portal using registration details.</p>
+                    <div class="card-footer">
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="actions">
+                            <span><i class="far fa-eye"></i> 1,234 views</span>
+                            <span><i class="fas fa-share-alt"></i> Share</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="card-header">
+                        <div class="tags">
+                            <span class="tag medium">Medium</span>
+                            <span class="tag registration">Registration</span>
+                        </div>
+                        <span class="time-ago">3 days ago</span>
+                    </div>
+                    <h3 class="announcement-title">UPSC CSE 2025 Registration Starts Soon</h3>
+                    <p class="announcement-excerpt">The Union Public Service Commission (UPSC) will open the application window for the Civil Services Examination (CSE) 2025 soon. Aspirants are advised to keep an eye on the official website.</p>
+                    <div class="card-footer">
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="actions">
+                            <span><i class="far fa-eye"></i> 987 views</span>
+                            <span><i class="fas fa-share-alt"></i> Share</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="card-header">
+                        <div class="tags">
+                            <span class="tag medium">Medium</span>
+                            <span class="tag registration">Registration</span>
+                        </div>
+                        <span class="time-ago">3 days ago</span>
+                    </div>
+                    <h3 class="announcement-title">UPSC CSE 2025 Registration Extended</h3>
+                    <p class="announcement-excerpt">The last date for UPSC Civil Services Examination 2025 registration has been extended till 15th January 2025. Candidates can apply online through the official UPSC website.</p>
+                    <div class="card-footer">
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="actions">
+                            <span><i class="far fa-eye"></i> 892 views</span>
+                            <span><i class="fas fa-share-alt"></i> Share</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="card-header">
+                        <div class="tags">
+                            <span class="tag low">Low</span>
+                            <span class="tag results">Results</span>
+                        </div>
+                        <span class="time-ago">1 week ago</span>
+                    </div>
+                    <h3 class="announcement-title">RRB NTPC Result Declaration</h3>
+                    <p class="announcement-excerpt">Railway Recruitment Board has declared the results for NTPC examination. Candidates can check their results on the official RRB website using their registration number.</p>
+                    <div class="card-footer">
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="actions">
+                            <span><i class="far fa-eye"></i> 567 views</span>
+                            <span><i class="fas fa-share-alt"></i> Share</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="load-more-btn">Load More Announcements</button>
+
+            </div>
+
+            <div class="side-panels">
+                <div class="panel quick-stats">
+                    <h2>Quick Stats</h2>
+                    <ul>
+                        <li>Total Announcements <span>156</span></li>
+                        <li class="green">This Week <span>12</span></li>
+                        <li class="red">Urgent <span>3</span></li>
+                        <li class="orange">High Priority <span>8</span></li>
+                    </ul>
+                </div>
+
+                <div class="panel recent-updates">
+                    <h2>Recent Updates</h2>
+                    <ul>
+                        <li>
+                            <span class="time-ago-small">2 hours ago</span>
+                            <p>SSC CGL Date Change</p>
+                        </li>
+                        <li>
+                            <span class="time-ago-small">1 day ago</span>
+                            <p>IBPS Admit Cards</p>
+                        </li>
+                        <li>
+                            <span class="time-ago-small">3 days ago</span>
+                            <p>UPSC Registration</p>
+                        </li>
+                        <li>
+                            <span class="time-ago-small">5 days ago</span>
+                            <p>New Exam Added</p>
+                        </li>
+                        </ul>
+                </div>
+
+                <div class="panel notification-settings">
+                    <h2>Notification Settings</h2>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="emailNotifications" checked>
+                        <label for="emailNotifications">Email Notifications</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="smsAlerts" checked>
+                        <label for="smsAlerts">SMS Alerts</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="pushNotifications">
+                        <label for="pushNotifications">Push Notifications</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="urgentOnly" checked>
+                        <label for="urgentOnly">Urgent Only</label>
+                    </div>
+                    <button class="btn btn-primary update-pref-btn">Update Preferences</button>
+                </div>
+
+                <div class="panel stay-updated-panel">
+                    <h3>Stay Updated</h3>
+                    <p>Get instant notifications for important announcements</p>
+                    <input type="email" placeholder="Enter your email">
+                    <button class="btn btn-primary subscribe-btn">Subscribe Now</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="filter-item">
-    <label for="category">Category</label>
-    <select id="category">
-      <option>All Categories</option>
-      <option> Exam Dates </option>
-      <option> Results </option>
-      <option> Admit Cards </option>
-      <option> Registration </option>
-      <option> General </option>
-    </select>
-  </div>
-
-  <div class="filter-item">
-    <label for="priority">Priority</label>
-    <select id="priority">
-      <option>All Priorities</option>
-      <option> Urgent </option>
-      <option>High</option>
-      <option>Medium</option>
-      <option>Low</option>
-    </select>
-  </div>
-</div>
-
-
-
-
-
-
-
-
 </body>
 </html>

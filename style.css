@@ -18,12 +18,6 @@ body{
   min-height: 100vh;
   background-color: antiquewhite;
 }
-
-
-
-
-
-
 .navbar,
 .navbar-content {
   display: flex;
@@ -37,12 +31,6 @@ nav a{
  justify-content: space-between;
  text-decoration:none;
 }
-
-
-
-
-
-
 
 .nav-content {
   display: flex;
@@ -59,458 +47,58 @@ nav a{
   color: #333;
   font-size: 14px;
 }
-/* Registration Form */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9fbfc;
-  margin: 0;
-  padding: 20px;
-}
-
-.progress-container {
-  max-width: 1000px;
-  margin: auto;
-  background: #fff;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.stepper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.step {
-  display: flex;
-  align-items: center;
-  position: relative;
-  flex: 1;
-}
-
-.circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #e2e8f0;
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.label {
-  margin-left: 10px;
-  color: #555;
-  white-space: nowrap;
-}
-
-.bar {
-  height: 4px;
-  flex-grow: 1;
-  background-color: #e2e8f0;
-  margin: 0 10px;
-  border-radius: 2px;
-}
-
-.step.active .circle {
-  background-color: #2563EB;
-  color: white;
-}
-
-.active-label {
-  color: #2563EB;
-  font-weight: bold;
-}
-
-.active-bar {
-  background-color: #2563EB;
-}
-
-/* Admin Dashboard */
-body {
-  margin: 0;
-  padding: 40px;
-  font-family: Arial, sans-serif;
-  background-color: #f9fafb;
-}
-
-.stats-container {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  width: 220px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.title {
-  font-size: 14px;
-  color: #6b7280;
-  margin: 0;
-}
-
-.card h2 {
-  font-size: 24px;
-  margin: 5px 0 0;
-  color: #111827;
-}
-
-.icon {
-  font-size: 24px;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.blue {
-  background-color: #e0ecff;
-  color: #2563EB;
-}
-
-.orange {
-  background-color: #fde8cd;
-  color: #ea580c;
-}
-
-.green-bg {
-  background-color: #dcfce7;
-  color: #16a34a;
-}
-
-.purple {
-  background-color: #f3e8ff;
-  color: #9333ea;
-}
-
-.change {
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.change span {
-  color: #4b5563;
-  font-weight: normal;
-}
-
-.green {
-  color: #16a34a;
-}
-
-/* Admit Card Page ANOTHER PAGE  */
-
-/* Reset default spacing */
+/* Main Page  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Remove browser default spacing */
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
-/* Base layout */
-.admit-page {
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9fafb;
-  color: #1f2937;
+  background-color: #f4f6f9;
 }
 
-/* Optional if you want fixed space around content */
-.container,
-.container-second {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 10px;
-}
-
-/* Form fields */
-.input-fields {
-  height: 50px;
-  width: 100%;
-}
-
-.admit-heading {
-  width: 100%;
-  padding: 20px 10px;
-}
-
-/* Form section */
-.container {
-  padding: 30px 10px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  background-color: #fff;
-}
-
-h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #1a1a1a;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #333;
-}
-
-input, select {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #dcdcdc;
-  border-radius: 8px;
-  outline: none;
-}
-
-input:focus, select:focus {
-  border-color: #4285f4;
-}
-
-.button-group {
-  grid-column: span 2;
-  display: flex;
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.primary-btn {
-  background-color: #2d64f5;
+.navbar {
+  background-color: #003366;
   color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.secondary-btn {
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Instructions and cards */
-.instructions {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  flex-wrap: wrap;
-}
-
-.column {
-  width: 48%;
-}
-
-.blue-ticks li::before {
-  content: "✔";
-  color: blue;
-  margin-right: 8px;
-}
-
-.orange-alerts li::before {
-  content: "⚠";
-  color: orange;
-  margin-right: 8px;
-}
-
-.cards-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card-section {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  min-width: 300px;
-}
-.exam-info p {
-    margin: 5px 0 0;
-    font-size: 0.9em;
-    color: #666;
-}
-
-.button-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  padding: 15px 30px;
+  flex-wrap: wrap;
 }
 
-.badge {
-  font-size: 13px;
-  padding: 5px 10px;
-  border-radius: 20px;
+.logo {
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
-.badge.green {
-  background-color: #d1fae5;
-  color: #065f46;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.badge.orange {
-  background-color: #fff7ed;
-  color: #b45309;
+.nav-links a:hover {
+  color: #ffcc00;
 }
 
-.exam-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
 }
-
-.green-card {
-  background-color: #ecfdf5;
-}
-
-.orange-card {
-  background-color: #fff7ed;
-}
-
-.status {
-  float: left;
-  font-weight: bolder;
-  font-size: large;
-}
-
-.green-text {
-  color: #059669;
-}
-
-.orange-text {
-  color: #ea580c;
-}
-
-.help-btn {
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  background-color: #f9fafb;
-  cursor: pointer;
-  text-align: left;
-  font-size: 16px;
-}
-
-
-
-
-
-
-
-
-/* Announcement */
-.search-filter-container {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f9fbfc;
-  border-radius: 10px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  border: 1px solid #e2e8f0;
-}
-
-.filter-item {
-  display: flex;
-  flex-direction: column;
-  min-width: 250px;
-}
-
-.filter-item label {
-  font-weight: 600;
-  color: #1a202c;
-  margin-bottom: 5px;
-}
-
-.search-input {
-  position: relative;
-  height:50px ;
-  width: 250px ;
-}
-
-.search-input .icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #a0aec0;
-}
-
-.search-input input {
-  width: 100%;
-  padding: 10px 10px 10px 30px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e0;
-  font-size: 14px;
-}
-
-select {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e0;
-  font-size: 14px;
-  background-color: #fff;
-}
-
 
 
 
