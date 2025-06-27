@@ -4,9 +4,8 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .form-container {
-  max-width: 450px;
+  max-width: 500px;
   margin: 40px auto;
   padding: 30px;
   background: #fff;
